@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+	"name": "Plociennik.info pomoc naukowa by asdfMaciej",
+	"version": "0.1",
+	"background": {
+	"scripts": ["background.js"]
+	},
+
+	"content_scripts": [{
+		"matches": [
+			"http://www.plociennik.info/*"
+		],
+		"js": [
+			"jquery-2.2.4.min.js",
+			"content.js"
+		]
+	}],
+
+	"permissions": [
+	    "activeTab",
+	    "storage"
+  	],
+  	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"web_accessible_resources": [
+		"pytania.json"
+	]
+}
